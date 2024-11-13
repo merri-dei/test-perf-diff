@@ -1,6 +1,6 @@
 {
     "functions": {
-      "api/test-results.js": {
+      "/api/test-results": {
         "includeFiles": "public/**/*"
       }
     }
