@@ -2,7 +2,7 @@
 const nextConfig = {
     experimental: {
         outputFileTracingIncludes: {
-            '/api/test-results': ['./public/**/*']
+            '/app/api/test-results/route': ['./public/**/*']
         }
     }
 }
