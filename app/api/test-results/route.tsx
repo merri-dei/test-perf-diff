@@ -116,8 +116,8 @@ export async function GET(req: NextRequest) {
   //   );
   // }
 
-  const beforeFileName = `./public/${before}.txt`;
-  const afterFileName = `./public/${after}.txt`;
+  const beforeFileName = `public/${before}.txt`;
+  const afterFileName = `public/${after}.txt`;
   const unoptimizedResults = getResultsByTestSuite(beforeFileName);
   const optimizedResults = getResultsByTestSuite(afterFileName);
 
