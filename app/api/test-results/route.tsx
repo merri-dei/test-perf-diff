@@ -31,7 +31,7 @@ export interface OptimizationSummary {
 }
 
 const getResultsByTestSuite = (resultsFilePath: string) => {
-  const resolvedFilePath = path.resolve(resultsFilePath);
+  const resolvedFilePath = path.resolve(process.cwd(), resultsFilePath);
   const rawFile = fs.readFileSync(resolvedFilePath, "utf8").trim();
   const results = matter(rawFile);
   const resultsByTestSuite = results.content
@@ -56,7 +56,7 @@ const getResultsByTestSuite = (resultsFilePath: string) => {
 };
 
 const getOptimizationFrontMatter = (resultsFilePath: string) => {
-  const resolvedFilePath = path.resolve(resultsFilePath);
+  const resolvedFilePath = path.resolve(process.cwd(), resultsFilePath);
   const rawFile = fs.readFileSync(resolvedFilePath, "utf8").trim();
   const results = matter(rawFile);
   return results.data;
@@ -116,8 +116,8 @@ export async function GET(req: NextRequest) {
   //   );
   // }
 
-  const beforeFileName = `public/${before}.txt`;
-  const afterFileName = `public/${after}.txt`;
+  const beforeFileName = `./public/${before}.txt`;
+  const afterFileName = `./public/${after}.txt`;
   const unoptimizedResults = getResultsByTestSuite(beforeFileName);
   const optimizedResults = getResultsByTestSuite(afterFileName);
 
