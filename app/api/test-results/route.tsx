@@ -31,7 +31,7 @@ export interface OptimizationSummary {
 }
 
 const getResultsByTestSuite = (resultsFilePath: string) => {
-  const resolvedFilePath = path.resolve(process.cwd(), resultsFilePath);
+  const resolvedFilePath = path.join(process.cwd(), resultsFilePath);
   const rawFile = fs.readFileSync(resolvedFilePath, "utf8").trim();
   const results = matter(rawFile);
   const resultsByTestSuite = results.content
@@ -56,7 +56,7 @@ const getResultsByTestSuite = (resultsFilePath: string) => {
 };
 
 const getOptimizationFrontMatter = (resultsFilePath: string) => {
-  const resolvedFilePath = path.resolve(process.cwd(), resultsFilePath);
+  const resolvedFilePath = path.join(process.cwd(), resultsFilePath);
   const rawFile = fs.readFileSync(resolvedFilePath, "utf8").trim();
   const results = matter(rawFile);
   return results.data;
