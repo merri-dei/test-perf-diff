@@ -1,0 +1,12 @@
+---
+title: Replace multiple subsequent getByRole option queries with getAllByRole option
+command: "yarn jest --clearCache && node --expose-gc ./node_modules/.bin/jest --no-coverage --runInBand --logHeapUs
+sSection.test.tsx src/components/RepositoryView/RepositoryPage/components/__tests__/FiltersSection.test.tsx src/core/Dropdowns/SearchDropdownWithTabs/__tests__/SearchDropdownWithTabs.test.tsx src/core/Dropdowns/SearchDropdownWithTabs/components/__tests__/SearchableList.test.tsx src/core/Dropdowns/SingleSelectionDropdown/components/__tests__/ComboBoxDropdown.test.tsx"
+---
+
+ PASS  src/core/Dropdowns/SearchDropdownWithTabs/__tests__/SearchDropdownWithTabs.test.tsx (17.564 s, 102 MB heap size)
+ PASS  src/components/RepositoryView/AIPage/AI/__tests__/AI.test.tsx (57.665 s, 181 MB heap size)
+ PASS  src/core/Dropdowns/SingleSelectionDropdown/components/__tests__/ComboBoxDropdown.test.tsx (2.46 s, 190 MB heap size)
+ PASS  src/components/RepositoryView/RepositoryPage/components/__tests__/FiltersSection.test.tsx (26.071 s, 213 MB heap size)
+ PASS  src/components/RepositoryView/AIPage/AI/components/__tests__/FiltersSection.test.tsx (7.389 s, 227 MB heap size)
+ PASS  src/core/Dropdowns/SearchDropdownWithTabs/components/__tests__/SearchableList.test.tsx (2.491 s, 238 MB heap size)
