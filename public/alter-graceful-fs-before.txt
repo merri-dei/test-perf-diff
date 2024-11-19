@@ -1,5 +1,5 @@
 ---
-title: Replace userEvent.type() with userEvent.paste().
+title: Replace graceful-fs with node fs to mitigate memory leaks.
 command: yarn jest --clearCache && node --expose-gc ./node_modules/.bin/jest --no-coverage --runInBand --logHeapUsage --slowTestThreshold=0
 ---
 
